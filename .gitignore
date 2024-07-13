@@ -4,3 +4,5 @@ shorts/
 *.txt
 !response.txt
 !requirements.txt
+venv/
+super-boys-font/

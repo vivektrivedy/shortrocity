@@ -1,6 +1,6 @@
 opencv-python
 elevenlabs
-captacity
+captacity[local_whisper]
 openai
 pydub
 numpy
