@@ -52,7 +52,7 @@ def create(data, output_folder):
         else:
             audio = elevenlabs.generate(
                 text=element["content"],
-                voice="Michael",
+                voice="Daniel",
                 model="eleven_monolingual_v1"
             )
             save(audio, output_file)
