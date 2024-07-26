@@ -9,6 +9,7 @@ import os
 import narration
 from images_replicate import generate_all_imgs, job_runner, generate_and_save_image
 import video
+from music import add_music
 
 import asyncio
 
@@ -103,5 +104,8 @@ generate_all_imgs(data, os.path.join(basedir, "images"))
 
 print("Generating video...")
 video.create(narrations, basedir, output_file, caption_settings)
+
+print("Adding music...")
+add_music(os.path.join(basedir, output_file), "ukelele.mp3", os.path.join(basedir, "final.mp4"))
 
 print(f"DONE! Here's your video: {os.path.join(basedir, output_file)}")
