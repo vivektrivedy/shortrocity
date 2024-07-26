@@ -54,7 +54,7 @@ response = client.chat.completions.create(
 
             IMPORTANT: Remember that this narration is for Tik Tok so make the narration, fun, engaging and really capture the listener's attention with hooks!  Make it memorable and shareable!  Be sure to open the narration with an intriguing question or comment that brings the reader in!  
 
-            IMPORTANT: Every narration sentence should be short and snappy
+            IMPORTANT: Every narration sentence should be short and snappy.
 
             Respond with a pair of an image description in square brackets and a narration below it. Both of them should be on their own lines, as follows:
             </Instructions>
@@ -86,7 +86,7 @@ The short should be 6 to 8 sentences maximum.
 )
 
 response_text = response.choices[0].message.content
-response_text.replace("’", "'").replace("`", "'").replace("…", "...").replace("“", '"').replace("”", '"')
+response_text.replace("’", "'").replace("`", "'").replace("…", "...").replace("“", '"').replace("”", '"').replace('!', '').replace('-', '')
 
 with open(os.path.join(basedir, "response.txt"), "w") as f:
     f.write(response_text)

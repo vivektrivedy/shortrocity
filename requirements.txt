@@ -4,3 +4,4 @@ captacity[local_whisper]
 openai
 pydub
 numpy
+replicate

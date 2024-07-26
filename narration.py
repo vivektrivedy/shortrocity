@@ -10,6 +10,11 @@ elevenlabs = ElevenLabs(
 narration_api = "elevenlabs" # (or "openai")
 
 def parse(narration):
+    """
+    takes in LLM outputted structured script and returns:
+        - data: list of all text and image descriptions
+        - narrations: list of narrations (ie. text only, no images)
+    """
     data = []
     narrations = []
     lines = narration.split("\n")

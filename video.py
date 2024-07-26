@@ -133,6 +133,8 @@ def create(narrations, output_dir, output_filename, caption_settings: dict|None 
     output_path = os.path.join(output_dir, output_filename)
     input_path = os.path.join(output_dir, with_narration)
     segments = create_segments(narrations, output_dir)
+    #segments = segments#fix weird off by one error causing double captions for last slide
+    
 
     captacity.add_captions(
         video_file=input_path,
@@ -143,8 +145,8 @@ def create(narrations, output_dir, output_filename, caption_settings: dict|None 
     )
 
     # Clean up temporary files
-    os.remove(input_path)
-    os.remove(temp_video)
+    # os.remove(input_path)
+    # os.remove(temp_video)
 
 def create_segments(narrations, output_dir):
     segments = []
